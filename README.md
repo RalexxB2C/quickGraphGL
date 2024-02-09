@@ -6,11 +6,9 @@ A WordPress plugin which speeds up GraphGL API requests by selective loading of 
 
 QuickRest needs to be installed as a Must Use plugin.
 
-Install via Composer (`composer require deliciousmedia/quickrest`), or just clone/copy the files to your mu-plugins folder.
-
 ## Usage
 
-By default, the plugin will prevent any regular WordPress plugins from loading when a request is made to any REST API endpoint.
+By default, the plugin will prevent any regular WordPress plugins from loading when a request is made to any GraphGL API endpoint.
 
 Plugins can be enabled on a per-namespace basis by filtering `quickrest_plugin_map`, for example:
 
