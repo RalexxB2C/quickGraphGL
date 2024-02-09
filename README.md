@@ -10,7 +10,7 @@ QuickRest needs to be installed as a Must Use plugin.
 
 By default, the plugin will prevent any regular WordPress plugins from loading when a request is made to any GraphGL API endpoint.
 
-Plugins can be enabled on a per-namespace basis by filtering `quickrest_plugin_map`, for example:
+Plugins can be enabled on a per-namespace basis by filtering `quickgraphql_plugin_map`, for example:
 
 ```
 function my_plugin_map_function( $map ) {
