@@ -1,6 +1,6 @@
 # QuickREST
 
-A WordPress plugin which speeds up REST API requests by selective loading of plugins.
+A WordPress plugin which speeds up GraphGL API requests by selective loading of plugins.
 
 ## Installation
 
