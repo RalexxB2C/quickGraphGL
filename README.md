@@ -20,7 +20,7 @@ function my_plugin_map_function( $map ) {
    ];
   return array_merge_recursive( $map, $new_map );
 }
-add_filter( 'quickrest_plugin_map', 'my_plugin_map_function', 15, 1 );
+add_filter( 'quickgraphql_plugin_map', 'my_plugin_map_function', 15, 1 );
 ```
 
 If nothing exists within the array for the current namespace, the plugin will fallback to the `_default` element which you can choose to enable.
@@ -29,14 +29,14 @@ If you want the default (or any other plugin) to load all active plugins, you ca
 
 ```
 add_filter(
-  'quickrest_plugin_map',
+  'quickgraphql_plugin_map',
   function( $map ) {
     // Remove our filter so we don't get stuck in a loop when getting the active_plugins option.
-    remove_filter( 'option_active_plugins', 'quickrest_filter_plugins', PHP_INT_MAX - 1 );
+    remove_filter( 'option_active_plugins', 'quickgraphql_filter_plugins', PHP_INT_MAX - 1 );
     $new_map = [
       '_default' => get_option( 'active_plugins' ),
     ];
-    add_filter( 'option_active_plugins', 'quickrest_filter_plugins', PHP_INT_MAX - 1 );
+    add_filter( 'option_active_plugins', 'quickgraphql_filter_plugins', PHP_INT_MAX - 1 );
     return array_merge_recursive( $map, $new_map );
   },
   10,
